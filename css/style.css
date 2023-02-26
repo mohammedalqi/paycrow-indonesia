@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;700&display=swap');
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  background-color: #121212;
+}
+
+header {
+  display: inline;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow-x: hidden;
+}
+
+header.navbar-container {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-block: 1rem;
+  z-index: 999;
+  background-color: #ffe164;
+  padding: 5px;
+}
+
+.navbar-container {
+  position: sticky;
+  top: 0;
+}
+
+header.navbar-container .logo img {
+  width: 250px;
+}
+
+header.navbar-container .nav-menu ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+  text-align: right;
+}
+
+header.navbar-container .nav-menu li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-menu li,
+a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: black;
+  padding: .5rem 1.5rem;
+  border-radius: 999px;
+  transition: all .2s ease-in-out;
+}
+
+header.navbar-container .nav-menu li:hover a {
+  background-color: #232323;
+  color: white;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  flex: 1;
+  align-items: center;
+}
+
+main #beranda .beranda-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+  color: #ffe164;
+}
+
+main #beranda .beranda-description p {
+  line-height: 1.7rem;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+article {
+  padding: 20px 5%;
+}
+
+main article #beranda {
+  width: 100%;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+}
+
+main article #beranda .beranda-image {
+  flex: 1;
+  display: flex;
+}
+
+main article #beranda .beranda-image img {
+  min-width: 250px;
+  width: 300px;
+  max-width: 100%;
+  width: 1000px;
+  height: auto;
+}
+
+main article #beranda .beranda-description button {
+  padding: .8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #ffe164;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+
+main article #beranda .beranda-description button:hover {
+  transform: scale(1) translate(3px);
+  border: 3px solid #ffe164;
+  color: #ffe164;
+  background-color: transparent;
+}
+
+main article #tentang-kami {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #1B1B1B;
+  border-radius: 20px;
+}
+
+main article #tentang-kami h2 {
+  font-size: 2.5rem;
+  margin-block: 1rem;
+  text-align: center;
+}
+
+main article #tentang-kami .tentang-kami-description {
+  line-height: 1.7rem;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+main article #tentang-kami img {
+  max-width: 100%;
+  width: 480px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main #layanan-kami .title {
+  font-size: 3rem;
+  margin-block: 1rem;
+  text-align: center;
+}
+
+.layanan {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.s-heading {
+  text-align: center;
+}
+
+.s-heading p {
+  color: white;
+  font-size: 1rem;
+  margin: 5px;
+  text-align: center;
+}
+
+.s-box-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px 25px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: 30px;
+  position: relative;
+  background-color: #ffe164;
+  transition: transform .2s;
+}
+
+.s-box img {
+  height: 75px;
+}
+
+.s-box h1 {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.s-box p {
+  color: black;
+  text-align: center;
+}
+
+.s-btn {
+  width: 140px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 10px;
+}
+
+.s-box:hover {
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.08);
+  transition: all ease 0.3s;
+  transform: scale(1.2);
+}
+
+.s-btn:hover {
+  background-color: black;
+  border: 1px solid black;
+  color: #FFFFFF;
+  transition: all ease 0.3s;
+}
+
+#cta {
+  background: #f5f5f5;
+  padding: 70px 0;
+  text-align: center;
+  width: 95%;
+  margin: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+
+#cta:hover{
+  background-color: white;
+}
+
+#cta h2 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+#cta p {
+  font-size: 1.5rem;
+  color: black;
+}
+
+#cta .download-btn {
+  margin: auto;
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #FF9800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+  transition: all .15s ease-in;
+}
+
+#cta .download-btn:hover {
+  transform: scale(1.1);
+  transition: all ease 0.3s;
+}
+
+#profile {
+  padding: 70px 0;
+  text-align: center;
+  width: 95%;
+  border-radius: 10px;
+  transition: all .15s ease-in;
+  margin: 2rem;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+#profile:hover{
+  border-color: #ffe164;
+}
+
+#profile img {
+  max-width: 100%;
+  width: 200px;
+}
+
+#profile h2 {
+  font-size: 3rem;
+}
+
+#profile p {
+  text-align: justify;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+footer #footer-menu {
+  background-color: #ffe164;
+}
+
+.footer-main {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 25%;
+}
+
+.col .menu-title {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
+.col .menu-title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: -8px;
+  background: var(--main-color);
+}
+
+.col ul li:not(:last-child) {
+  margin-bottom: 15pxh;
+}
+
+.col ul li a {
+  color: #232323;
+  font-size: 1.1rem;
+  display: block;
+  transition: .4s;
+}
+
+.col ul li a:hover {
+  color: black;
+  transform: translate(-12px);
+}
+
+.col .sosmed i {
+  height: 40px;
+  width: 40px;
+  background-color: #232323;
+  color: #ffe164;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: .4s;
+}
+
+.col .sosmed i:hover {
+  transform: scale(1.2);
+  color: #232323;
+  background: white;
+}
+
+.col li {
+  list-style-type: none;
+}
+
+#menu-icon {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1140px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-menu ul {
+    flex-wrap: wrap;
+    column-gap: .5rem;
+  }
+
+  main article #beranda {
+    flex-direction: row;
+  }
+
+  main article #beranda .beranda-description .title {
+    font-size: 3rem;
+  }
+
+  main article #beranda .beranda-description p {
+    font-size: 1rem;
+  }
+
+  main article #beranda .beranda-image {
+    order: -1;
+    flex: 1;
+    display: flex;
+  }
+
+  main article #tentang-kami .title {
+    font-size: 2rem;
+  }
+
+    main article #tentang-kami .tentang-kami-description {
+    font-size: 1rem;
+  }
+
+
+  .s-box-container {
+    flex-wrap: wrap;
+  }
+
+  .layanan {
+    height: auto;
+  }
+
+  .s-heading {
+    margin: 15px;
+  }
+
+  .s-box {
+    flex-grow: 1;
+  }
+
+  .profil {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main article #beranda .beranda-image {
+    display: none;
+  }
+
+  main article #beranda .beranda-description .title {
+    font-size: 4rem;
+  }
+
+  main article #beranda .beranda-description p {
+    font-size: 1.2rem;
+  }
+
+}
